@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$HYDRO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/furina icons.png" type="image/x-icon">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <audio id="background-music" loop>
+        <source src="assets/ikuyo.mp3" type="audio/mpeg">
+        <source src="assets/ikuyo.ogg" type="audio/ogg">
+        Your browser does not support the audio tag.
+    </audio>
+    
+    <script>
+        // Function to play the music
+        function playMusic() {
+            const audio = document.getElementById('background-music');
+            audio.play().catch((error) => {
+                console.log('Playback prevented. User interaction may be required.', error);
+            });
+        }
+
+        // Add an event listener to play music on page load
+        window.addEventListener('load', playMusic);
+    </script>
+
+    <div class="container">
+        <!-- Navbar -->
+        <div class="navbar">
+            <img src="assets/furina icons.png" alt="CWOK">
+            <h1>FURINA</h1>
+        </div>
+        <!-- Top Section -->
+        <div class="top-section">
+            <div class="mascot-sit">
+                <img src="assets/furina no bg.png" alt="CWOK Mascot">
+            </div>
+            <div class="title">
+                <h1>$HYDRO</h1>
+                <p>furina the cute foolish hydro archon</p>
+                <div class="buttons">
+                    <a href="https://x.com/cwoksolana" target="_blank" class="btn twitter">twitter</a>
+                    <a href="https://t.me/cwoksolana" target="_blank" class="btn telegram">telegram</a>
+                    <a href="#" target="_blank" class="btn telegram">buy</a>
+                    <p class="ca">ca : So11111111111111111111111111111111111111112</p>
+                </div>
+            </div>
+        </div>
+    </div>
+                
+    
+    <div class="container-2"> 
+        <!-- First Banner -->
+        <div class="banner first-banner">
+            <div class="banner-content">
+                $HYDRO $HYDRO $HYDRO $HYDRO $HYDRO $HYDRO $HYDRO 
+            </div>
+        </div>
+        <!-- Bottom Section -->
+        <div class="bottom-section">
+            <div class="description">
+                <p>
+                    furina is the cutest archon ever made.<br>
+                    ruler of the hydro nation, fountain.<br>
+                    coming on solana.
+                </p><br>
+            </div>
+            <div class="gif">
+                <img src="assets/videoplayback.gif" alt="furina gif">
+            </div>
+            <div class="button-mussic">
+                <button onclick="playMusic()">Play Music</button>
+            </div>
+        </div>
+
+        <!-- Second Banner -->
+        <div class="banner second-banner">
+            <div class="banner-content">
+                $HYDRO $HYDRO $HYDRO $HYDRO $HYDRO $HYDRO $HYDRO
+            </div>
+        </div>
+    </div>
+</body>
+</html>
