@@ -13,25 +13,6 @@
 </head>
 <body>
 
-    <audio id="background-music" loop>
-        <source src="assets/ikuyo.mp3" type="audio/mpeg">
-        <source src="assets/ikuyo.ogg" type="audio/ogg">
-        Your browser does not support the audio tag.
-    </audio>
-    
-    <script>
-        // Function to play the music
-        function playMusic() {
-            const audio = document.getElementById('background-music');
-            audio.play().catch((error) => {
-                console.log('Playback prevented. User interaction may be required.', error);
-            });
-        }
-
-        // Add an event listener to play music on page load
-        window.addEventListener('load', playMusic);
-    </script>
-
     <div class="container">
         <!-- Navbar -->
         <div class="navbar">
@@ -73,14 +54,31 @@
                     coming on solana.
                 </p><br>
             </div>
-            <div class="gif">
-                <img src="assets/videoplayback.gif" alt="furina gif">
-            </div>
-            <div class="button-mussic">
-                <button onclick="playMusic()">Play Music</button>
+            <div class="video">
+                <video id="myVideo" autoplay loop>
+                    <source src="assets/furina doodle.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <script>
+                    const video = document.getElementById('myVideo');
+                    
+                    // Initially pause the video
+                    video.pause();
+                    video.muted = true; // Start muted
+                    
+                    // Add click event listener to the video container
+                    document.querySelector('.video').addEventListener('click', () => {
+                        if (video.paused) {
+                            video.muted = false; // Unmute the video
+                            video.play(); // Play the video
+                        } else {
+                            video.pause(); // Pause the video
+                            video.muted = true; // Mute the video
+                        }
+                    });
+                </script>
             </div>
         </div>
-
         <!-- Second Banner -->
         <div class="banner second-banner">
             <div class="banner-content">
@@ -88,5 +86,6 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>

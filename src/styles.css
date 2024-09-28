@@ -117,6 +117,7 @@ body::-webkit-scrollbar {
     display: inline-flex;
     flex-direction: column;
     text-align: center;
+    justify-content: center;
 }
 
 .buttons .btn {
@@ -216,59 +217,30 @@ body::-webkit-scrollbar {
     font-weight: 900;
 }
 
-.gif {
+.video {
     display: flex;
     justify-content: center; /* Center the GIF */
     align-items: center; /* Center vertically if needed */
     padding: 20px; /* Adjust as needed */
 }
 
-.gif img {
+.video video {
     max-width: 100%; /* Ensure the GIF doesn't overflow its container */
     height: auto; /* Maintain aspect ratio */
     width: 300px; /* Base width for larger screens */
 }
 
 @media (max-width: 768px) {
-    .gif img {
+    .video video {
         width: 80%; /* Scale down for tablets */
     }
 }
 
 @media (max-width: 480px) {
-    .gif img {
+    .video video {
         width: 100%; /* Full width for mobile */
     }
 }
-
-.button-music {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px; /* Space between elements */
-}
-
-.button-music button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #28a745; /* Green background */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.button-music button:hover {
-    background-color: #218838; /* Darker green on hover */
-}
-
-@media (max-width: 600px) {
-    .button-music button {
-        width: 100%; /* Full width on small screens */
-        font-size: 0.9rem; /* Slightly smaller font size */
-    }
-}
-
 
 @keyframes scroll {
     0% {
@@ -337,3 +309,4 @@ body::-webkit-scrollbar {
         font-size: 76px; /* Smaller size for mobile phones */
     }
 }
+
